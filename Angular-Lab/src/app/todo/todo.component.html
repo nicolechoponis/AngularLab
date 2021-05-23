@@ -1,0 +1,15 @@
+<div>
+<h1>{{title}}</h1>
+
+
+<p>A place to store your to-do's.</p>
+<input type="text" [(ngModel)]="searchText" class="filter-to-do" placeholder="Filter your to-dos" />
+<ul class ='todoList' *ngFor="let items of ToDoList | filterPipe : searchText : 'task'; let i= index"> 
+    <li><div>{{i+1}} <button *ngIf="items.completed === false" id="complete" (click)="newlyCompletedItem(i)">Complete</button><span [ngClass] = "{strikethrough:items.completed}">{{items.task}} </span> </div><button class ="x" (click)="removeTask(i)"><i class="fas fa-times"></i></button></li>
+
+</ul>
+<input type="text" [(ngModel)]="addText" class="add-to-do" placeholder="Add your to-do"/>
+<button class="add" (click)="addToList(addText)">Add</button>
+</div>
+
+

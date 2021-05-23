@@ -1,0 +1,44 @@
+*{
+    margin-left: 5px;
+}
+ul.todoList {
+    list-style-type: none}
+
+.complete {
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 75%);
+    background-color: #ff69b4;
+    color: #bbb;
+    padding: 5px;
+    margin: 5px;
+}
+
+.strikethrough{
+    text-decoration: line-through;
+}
+
+li{display:flex; 
+   justify-content: space-between;
+   margin-left: -40px;
+}
+
+.x{
+      
+    color: #ff1493;
+    border: none;
+    font-size: 20px;
+    
+
+}
+.add {
+    background: linear-gradient(to right, #f857a6, #ff5858);
+    color: #eee;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.add, .add-to-do, .filter-to-do {
+    width: 90%;
+    margin-right: 5px;
+}
